@@ -1,0 +1,13 @@
+{
+    "devices":
+     {
+        "USB Serial": "iCtrl-R Mini",
+        "iCtrlr mini": "iCtrl-R Mini",
+        "iCtrl-R mini": "iCtrl-R mini BT",
+        "iCtrl-R mini BT": "iCtrl-R mini BT",
+        "Feather": "iCtrl-R mini BT",
+        "Adafruit": "iCtrl-R mini BT",
+        "Teensy": "iCtrl-R mini",
+        "CP2102": "USB2.0-Ser"
+    }
+}
