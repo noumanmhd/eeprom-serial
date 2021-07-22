@@ -1,12 +1,13 @@
 import os
 import sys
 
+from PyQt5 import QtGui
 from PyQt5 import QtCore
 from PyQt5 import QtWidgets
-from PyQt5 import QtGui
+
 
 # Local functions and classes
-from get_data import SerialData
+from page import Page
 from custom_functions import get_ports
 
 
@@ -28,6 +29,15 @@ class MainWidget(QtWidgets.QWidget):
         ports_layout.addWidget(detect_btn)
 
         layout.addLayout(ports_layout)
+        
+        # Define Pages
+        self.page_1 = Page(start_addr=0)
+
+        self.tabs = QtWidgets.QTabWidget()
+        # Add Pages
+        self.tabs.addTab(self.page_1, 'Page 1')
+        
+        layout.addWidget(self.tabs)
         self.setLayout(layout)
 
     def set_ports(self):
@@ -43,7 +53,8 @@ class MainWidget(QtWidgets.QWidget):
     def selection_change(self, value):
         if value > 0:
             port = self.ports[value - 1]["device"]
-            print(port)
+            self.page_1.set_port(port)
+            self.page_1.read_eeprom()
     
 
 
