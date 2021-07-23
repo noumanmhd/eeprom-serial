@@ -45,7 +45,7 @@ background-color: rgb(102, 102, 102);</string>
       </sizepolicy>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color: rgb(234, 241, 255);</string>
      </property>
      <property name="title">
       <string/>
@@ -4696,7 +4696,7 @@ color: rgb(0, 0, 0);</string>
         <x>10</x>
         <y>11</y>
         <width>251</width>
-        <height>31</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="toolTip">

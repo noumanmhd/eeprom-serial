@@ -25,14 +25,13 @@ class MainWidget(QtWidgets.QWidget):
 
         ports_layout = QtWidgets.QHBoxLayout()
         self.p_list = QtWidgets.QComboBox()
-        self.set_ports()
         self.p_list.currentIndexChanged.connect(self.selection_change)
         ports_layout.addWidget(self.p_list)
 
-        detect_btn = QtWidgets.QPushButton('Detect Ports', self)
-        detect_btn.setToolTip('Click to detect ports')
-        detect_btn.clicked.connect(self.set_ports)
-        ports_layout.addWidget(detect_btn)
+        self.detect_btn = QtWidgets.QPushButton('Detect Ports', self)
+        self.detect_btn.setToolTip('Click to detect ports')
+        self.detect_btn.clicked.connect(self.set_ports)
+        ports_layout.addWidget(self.detect_btn)
 
         layout.addLayout(ports_layout)
 
@@ -40,18 +39,28 @@ class MainWidget(QtWidgets.QWidget):
         self.add_pages()
         layout.addWidget(self.tabs)
 
-        file_layout = QtWidgets.QHBoxLayout()
-        save_btn = QtWidgets.QPushButton('Save all preset to file', self)
+        btns_layout = QtWidgets.QHBoxLayout()
+        self.write_btn = QtWidgets.QPushButton('Write All', self)
+        self.write_btn.clicked.connect(self.write_all)
+        
+        self.read_btn = QtWidgets.QPushButton('Update All', self)
+        self.read_btn.clicked.connect(self.read_all)
+
+        btns_layout.addWidget(self.write_btn)
+        btns_layout.addWidget(self.read_btn)
+
+        self.save_btn = QtWidgets.QPushButton('Save all preset to file', self)
         # save_btn.clicked.connect(self.set_ports)
         
-        load_btn = QtWidgets.QPushButton('Load presets from file', self)
+        self.load_btn = QtWidgets.QPushButton('Load presets from file', self)
         # load_btn.clicked.connect(self.set_ports)
         
-        file_layout.addWidget(load_btn)
-        file_layout.addWidget(save_btn)
+        btns_layout.addWidget(self.load_btn)
+        btns_layout.addWidget(self.save_btn)
 
-        layout.addLayout(file_layout)
+        layout.addLayout(btns_layout)
         self.setLayout(layout)
+        self.set_ports()
 
     def add_pages(self):
         """ Function to add Pages and create there tabs """
@@ -71,6 +80,7 @@ class MainWidget(QtWidgets.QWidget):
                 self.p_list.addItem(f'{port["product"]} ({port["device"]})')
         else:
             self.p_list.addItem("--- No device detected ---")
+        self.detect_btn.clearFocus()
 
     def selection_change(self, value):
         if value > 0:
@@ -78,14 +88,24 @@ class MainWidget(QtWidgets.QWidget):
             for page in self.pages:
                 page.set_port(port)
                 page.read_eeprom()
-                self.p_list.clearFocus()
+        self.p_list.clearFocus()
+
+    def write_all(self):
+        for page in self.pages:
+            page.write_eeprom()
+        self.write_btn.clearFocus()
+    
+    def read_all(self):
+        for page in self.pages:
+            page.read_eeprom()
+        self.read_btn.clearFocus()    
 
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     window = QtWidgets.QMainWindow()
     # window.setWindowState(QtCore.Qt.WindowMaximized)
-    window.setFixedSize(1220, 710)
+    window.setFixedSize(1220, 720)
     qtRectangle = window.frameGeometry()
     centerPoint = QtWidgets.QDesktopWidget().availableGeometry().center()
     qtRectangle.moveCenter(centerPoint)
