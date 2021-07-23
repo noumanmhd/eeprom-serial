@@ -10,13 +10,18 @@ from PyQt5 import QtWidgets
 from page import Page
 from custom_functions import get_ports
 
+NUMBER_OF_PAGES = 5
+
+# Number of memory addresses for each page
+PAGE_MEMORY = 75
+
 
 class MainWidget(QtWidgets.QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
-        
+
         layout = QtWidgets.QVBoxLayout()
-        
+
         ports_layout = QtWidgets.QHBoxLayout()
         self.p_list = QtWidgets.QComboBox()
         self.set_ports()
@@ -29,17 +34,19 @@ class MainWidget(QtWidgets.QWidget):
         ports_layout.addWidget(detect_btn)
 
         layout.addLayout(ports_layout)
-        
-        # Define Pages
-        self.page_1 = Page(start_addr=0)
-        self.page_2 = Page(start_addr=75)
+
         self.tabs = QtWidgets.QTabWidget()
-        # Add Pages
-        self.tabs.addTab(self.page_1, 'Page 1')
-        self.tabs.addTab(self.page_2, 'Page 2')
-        
+        self.add_pages()
+
         layout.addWidget(self.tabs)
         self.setLayout(layout)
+
+    def add_pages(self):
+        """ Function to add Pages and create there tabs """
+        self.pages = []
+        for i in range(NUMBER_OF_PAGES):
+            self.pages.append(Page(start_addr=(i*PAGE_MEMORY)))
+            self.tabs.addTab(self.pages[i], f'Page {i+1}')
 
     def set_ports(self):
         self.ports = get_ports()
@@ -54,19 +61,16 @@ class MainWidget(QtWidgets.QWidget):
     def selection_change(self, value):
         if value > 0:
             port = self.ports[value - 1]["device"]
-            self.page_1.set_port(port)
-            self.page_2.set_port(port)
-            self.page_1.read_eeprom()
-            self.page_2.read_eeprom()
-    
-
+            for page in self.pages:
+                page.set_port(port)
+                page.read_eeprom()
 
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     window = QtWidgets.QMainWindow()
     # window.setWindowState(QtCore.Qt.WindowMaximized)
-    window.setFixedSize(1220,710)
+    window.setFixedSize(1220, 710)
     qtRectangle = window.frameGeometry()
     centerPoint = QtWidgets.QDesktopWidget().availableGeometry().center()
     qtRectangle.moveCenter(centerPoint)
