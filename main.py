@@ -8,6 +8,7 @@ from PyQt5 import QtWidgets
 
 # Local functions and classes
 from page import Page
+from first_page import FirstPage
 from custom_functions import get_ports
 
 NUMBER_OF_PAGES = 5
@@ -37,14 +38,27 @@ class MainWidget(QtWidgets.QWidget):
 
         self.tabs = QtWidgets.QTabWidget()
         self.add_pages()
-
         layout.addWidget(self.tabs)
+
+        file_layout = QtWidgets.QHBoxLayout()
+        save_btn = QtWidgets.QPushButton('Save all preset to file', self)
+        # save_btn.clicked.connect(self.set_ports)
+        
+        load_btn = QtWidgets.QPushButton('Load presets from file', self)
+        # load_btn.clicked.connect(self.set_ports)
+        
+        file_layout.addWidget(load_btn)
+        file_layout.addWidget(save_btn)
+
+        layout.addLayout(file_layout)
         self.setLayout(layout)
 
     def add_pages(self):
         """ Function to add Pages and create there tabs """
         self.pages = []
-        for i in range(NUMBER_OF_PAGES):
+        self.pages.append(FirstPage(start_addr=0))
+        self.tabs.addTab(self.pages[0], f'Page 1')
+        for i in range(1, NUMBER_OF_PAGES):
             self.pages.append(Page(start_addr=(i*PAGE_MEMORY)))
             self.tabs.addTab(self.pages[i], f'Page {i+1}')
 
@@ -64,6 +78,7 @@ class MainWidget(QtWidgets.QWidget):
             for page in self.pages:
                 page.set_port(port)
                 page.read_eeprom()
+                self.p_list.clearFocus()
 
 
 if __name__ == '__main__':

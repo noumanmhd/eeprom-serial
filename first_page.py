@@ -11,10 +11,10 @@ GOOD_CHARS = good_chars()
 TEXT_LEN = 9
 
 
-class Page(QtWidgets.QWidget):
+class FirstPage(QtWidgets.QWidget):
     def __init__(self, start_addr=0, port=None):
-        super(Page, self).__init__()
-        uic.loadUi('page.ui', self)
+        super(FirstPage, self).__init__()
+        uic.loadUi('first_page.ui', self)
         self.port = port
         self.start_addr = start_addr
         self.write_btn.clicked.connect(self.write_eeprom)
