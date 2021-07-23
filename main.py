@@ -32,10 +32,11 @@ class MainWidget(QtWidgets.QWidget):
         
         # Define Pages
         self.page_1 = Page(start_addr=0)
-
+        self.page_2 = Page(start_addr=75)
         self.tabs = QtWidgets.QTabWidget()
         # Add Pages
         self.tabs.addTab(self.page_1, 'Page 1')
+        self.tabs.addTab(self.page_2, 'Page 2')
         
         layout.addWidget(self.tabs)
         self.setLayout(layout)
@@ -54,7 +55,9 @@ class MainWidget(QtWidgets.QWidget):
         if value > 0:
             port = self.ports[value - 1]["device"]
             self.page_1.set_port(port)
+            self.page_2.set_port(port)
             self.page_1.read_eeprom()
+            self.page_2.read_eeprom()
     
 
 
@@ -63,7 +66,7 @@ if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     window = QtWidgets.QMainWindow()
     # window.setWindowState(QtCore.Qt.WindowMaximized)
-    window.setFixedSize(1104,614)
+    window.setFixedSize(1220,710)
     qtRectangle = window.frameGeometry()
     centerPoint = QtWidgets.QDesktopWidget().availableGeometry().center()
     qtRectangle.moveCenter(centerPoint)

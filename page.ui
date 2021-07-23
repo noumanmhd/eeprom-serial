@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1210</width>
-    <height>527</height>
+    <width>1191</width>
+    <height>618</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -35,6 +35,15 @@ background-color: rgb(102, 102, 102);</string>
   <layout class="QHBoxLayout" name="horizontalLayout_3">
    <item>
     <widget class="QGroupBox" name="GeneralGroupbox">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
@@ -44,9 +53,9 @@ background-color: rgb(102, 102, 102);</string>
      <widget class="QGroupBox" name="columnbox1">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>121</width>
+        <x>10</x>
+        <y>50</y>
+        <width>111</width>
         <height>431</height>
        </rect>
       </property>
@@ -437,7 +446,7 @@ background-color: rgb(102, 102, 102);</string>
       <property name="geometry">
        <rect>
         <x>120</x>
-        <y>0</y>
+        <y>50</y>
         <width>121</width>
         <height>431</height>
        </rect>
@@ -830,7 +839,7 @@ background-color: rgb(204, 204, 204);</string>
       <property name="geometry">
        <rect>
         <x>360</x>
-        <y>0</y>
+        <y>50</y>
         <width>121</width>
         <height>431</height>
        </rect>
@@ -1222,7 +1231,7 @@ background-color: rgb(204, 204, 204);</string>
       <property name="geometry">
        <rect>
         <x>480</x>
-        <y>0</y>
+        <y>50</y>
         <width>121</width>
         <height>431</height>
        </rect>
@@ -1614,7 +1623,7 @@ background-color: rgb(204, 204, 204);</string>
       <property name="geometry">
        <rect>
         <x>600</x>
-        <y>0</y>
+        <y>50</y>
         <width>121</width>
         <height>431</height>
        </rect>
@@ -2006,7 +2015,7 @@ background-color: rgb(204, 204, 204);</string>
       <property name="geometry">
        <rect>
         <x>720</x>
-        <y>0</y>
+        <y>50</y>
         <width>121</width>
         <height>431</height>
        </rect>
@@ -2398,7 +2407,7 @@ background-color: rgb(204, 204, 204);</string>
       <property name="geometry">
        <rect>
         <x>840</x>
-        <y>0</y>
+        <y>50</y>
         <width>121</width>
         <height>431</height>
        </rect>
@@ -2790,8 +2799,8 @@ background-color: rgb(204, 204, 204);</string>
       <property name="geometry">
        <rect>
         <x>960</x>
-        <y>0</y>
-        <width>121</width>
+        <y>50</y>
+        <width>111</width>
         <height>431</height>
        </rect>
       </property>
@@ -3182,7 +3191,7 @@ background-color: rgb(204, 204, 204);</string>
       <property name="geometry">
        <rect>
         <x>240</x>
-        <y>0</y>
+        <y>50</y>
         <width>121</width>
         <height>431</height>
        </rect>
@@ -3573,9 +3582,9 @@ background-color: rgb(204, 204, 204);</string>
      <widget class="QGroupBox" name="columnbox10">
       <property name="geometry">
        <rect>
-        <x>1080</x>
-        <y>0</y>
-        <width>121</width>
+        <x>1070</x>
+        <y>50</y>
+        <width>101</width>
         <height>431</height>
        </rect>
       </property>
@@ -3971,15 +3980,16 @@ background-color: rgb(204, 204, 204);</string>
      <widget class="QPushButton" name="write_btn">
       <property name="geometry">
        <rect>
-        <x>320</x>
-        <y>450</y>
+        <x>350</x>
+        <y>570</y>
         <width>191</width>
-        <height>41</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 0, 0);
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+font: 14pt &quot;Arial&quot;;</string>
       </property>
       <property name="text">
        <string>Write</string>
@@ -3988,18 +3998,471 @@ color: rgb(255, 255, 255);</string>
      <widget class="QPushButton" name="update_btn">
       <property name="geometry">
        <rect>
-        <x>590</x>
-        <y>450</y>
+        <x>640</x>
+        <y>570</y>
         <width>191</width>
-        <height>41</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(85, 255, 0);
-color: rgb(255, 255, 255);</string>
+color: rgb(0, 0, 0);
+font: 14pt &quot;Arial&quot;;</string>
       </property>
       <property name="text">
-       <string>Update</string>
+       <string>Read</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="formGroupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>520</y>
+        <width>1161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 173, 173);</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_DAELECTRONICS_7">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>114</width>
+           <height>26</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>125</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(172, 202, 227);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;VSLIDER&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="onoffVslider">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>65</width>
+           <height>22</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(172, 202, 227);</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>OFF</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ON</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line_26">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_VSLIDERCC_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Vslider CC</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox_VSLID_EXPPED_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>60</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="maximum">
+          <number>127</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line_28">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_VSLIDERSWCC_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Vslider SwitchCC</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox_VSLIDSWITCH_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>60</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="maximum">
+          <number>127</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line_27">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_VSLIDERSPEEDOFF_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Auto-on speed</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox_VSLIDAUTOON_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>60</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="maximum">
+          <number>255</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line_64">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_VSLIDERSPEEDON_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Auto-off speed</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox_VSLIDAUTOFF_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>60</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="maximum">
+          <number>255</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line_65">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_VSLIDERMIDICH_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>MIDI channel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox_VSLIDMIDCH_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>60</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>16</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_Instructions">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>490</y>
+        <width>1161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 13pt &quot;Arial&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <property name="text">
+       <string>For Each Bank you can have up to 10 different sound by setting Program Chages or Scenes in &quot;PC/SC&quot;box above</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Bank1">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>200</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 24pt &quot;.SF NS Text&quot;;</string>
+      </property>
+      <property name="text">
+       <string>BANK NAME</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_SAVE">
+      <property name="geometry">
+       <rect>
+        <x>1010</x>
+        <y>10</y>
+        <width>160</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>160</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(172, 202, 227);</string>
+      </property>
+      <property name="text">
+       <string>Save all preset to file</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_LOAD">
+      <property name="geometry">
+       <rect>
+        <x>840</x>
+        <y>10</y>
+        <width>160</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>148</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>160</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(172, 202, 227);</string>
+      </property>
+      <property name="text">
+       <string>Load presets from file</string>
       </property>
      </widget>
     </widget>

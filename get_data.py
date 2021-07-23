@@ -4,6 +4,8 @@ import serial
 RETRIES = 5
 MEMORY_LIMIT = 2048
 
+DEBUG = False
+
 
 class SerialData:
     def __init__(self, port='/dev/ttyUSB0', baud=9600):
@@ -29,8 +31,9 @@ class SerialData:
             data = self.get_data()
             if isinstance(data, dict):
                 if data['status']:
-                    print(
-                        f"Addr: 0x{addr:04X}, Value: {value:04X}, Status: True")
+                    if DEBUG:
+                        print(
+                            f"Addr: 0x{addr:04X}, Value: {value:04X}, Status: True")
                     return None
 
     def get(self, addr):
@@ -41,7 +44,8 @@ class SerialData:
             data = self.get_data()
             if isinstance(data, dict):
                 if data['status']:
-                    print(data)
+                    if DEBUG:
+                        print(data)
                     return data['value']
         return False
 
