@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>iCtrl-R Mini EDITOR</string>
+   <string>MainWindow</string>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -4369,40 +4369,6 @@ color: rgb(0, 0, 0);</string>
        <string>For Each Bank you can have up to 10 different sound by setting Program Chages or Scenes in &quot;PC/SC&quot;box above</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_Bank1">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>200</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>100</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>200</width>
-        <height>30</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 24pt &quot;.SF NS Text&quot;;</string>
-      </property>
-      <property name="text">
-       <string>BANK NAME</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="pushButton_SAVE">
       <property name="geometry">
        <rect>
@@ -4896,6 +4862,47 @@ color: rgb(0, 0, 0);</string>
         </widget>
        </item>
       </layout>
+     </widget>
+     <widget class="QLineEdit" name="bank_name">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>11</y>
+        <width>271</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Click to Edit</string>
+      </property>
+      <property name="toolTipDuration">
+       <number>0</number>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+font: 24pt &quot;.SF NS Text&quot;;
+border: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>BANK NAME</string>
+      </property>
+      <property name="maxLength">
+       <number>9</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="hidden_random">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>20</y>
+        <width>58</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </widget>
     </widget>
    </item>

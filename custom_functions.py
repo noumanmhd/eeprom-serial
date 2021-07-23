@@ -1,3 +1,4 @@
+import string
 from serial.tools.list_ports import comports
 
 
@@ -11,6 +12,13 @@ def get_ports():
                 "product": port.product,
                 "device": port.device})
     return ports
+
+
+def good_chars():
+    chars = string.printable
+    for c in "*\t\n\r\x0b\x0c":
+        chars = chars.replace(c, '')
+    return chars
 
 
 if __name__ == '__main__':
