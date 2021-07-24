@@ -9,7 +9,11 @@ from PyQt5 import QtWidgets
 # Local functions and classes
 from page import Page
 from first_page import FirstPage
-from custom_functions import get_ports
+from custom_functions import (
+    get_ports,
+    dump_json,
+    load_json
+)
 
 NUMBER_OF_PAGES = 5
 
@@ -46,7 +50,7 @@ class MainWidget(QtWidgets.QWidget):
         btns_layout = QtWidgets.QHBoxLayout()
         self.write_btn = QtWidgets.QPushButton('Write All', self)
         self.write_btn.clicked.connect(self.write_all)
-        
+
         self.read_btn = QtWidgets.QPushButton('Update All', self)
         self.read_btn.clicked.connect(self.read_all)
 
@@ -54,11 +58,11 @@ class MainWidget(QtWidgets.QWidget):
         btns_layout.addWidget(self.read_btn)
 
         self.save_btn = QtWidgets.QPushButton('Save all preset to file', self)
-        # save_btn.clicked.connect(self.set_ports)
-        
+        self.save_btn.clicked.connect(self.save_click)
+
         self.load_btn = QtWidgets.QPushButton('Load presets from file', self)
-        # load_btn.clicked.connect(self.set_ports)
-        
+        self.load_btn.clicked.connect(self.load_click)
+
         btns_layout.addWidget(self.load_btn)
         btns_layout.addWidget(self.save_btn)
 
@@ -69,12 +73,13 @@ class MainWidget(QtWidgets.QWidget):
     def add_pages(self):
         """ Function to add Pages and create there tabs """
         self.pages = []
-        self.pages.append(FirstPage(start_addr=0, text_addr=TEXT_ADDR, text_len=TEXT_LEN))
+        self.pages.append(
+            FirstPage(start_addr=0, text_addr=TEXT_ADDR, text_len=TEXT_LEN))
         self.tabs.addTab(self.pages[0], f'Page 1')
         for i in range(1, NUMBER_OF_PAGES):
             self.pages.append(Page(
-                start_addr=(i*PAGE_MEMORY) + FIRST_PAGE_MEMORY, 
-                text_addr=(TEXT_ADDR + (i*TEXT_LEN)), 
+                start_addr=(i*PAGE_MEMORY) + FIRST_PAGE_MEMORY,
+                text_addr=(TEXT_ADDR + (i*TEXT_LEN)),
                 text_len=TEXT_LEN))
             self.tabs.addTab(self.pages[i], f'Page {i+1}')
 
@@ -101,11 +106,43 @@ class MainWidget(QtWidgets.QWidget):
         for page in self.pages:
             page.write_eeprom()
         self.write_btn.clearFocus()
-    
+
     def read_all(self):
         for page in self.pages:
             page.read_eeprom()
-        self.read_btn.clearFocus()    
+        self.read_btn.clearFocus()
+    
+    def saveFileDialog(self):
+        options = QtWidgets.QFileDialog.Options()
+        options |= QtWidgets.QFileDialog.DontUseNativeDialog
+        file_name, _ = QtWidgets.QFileDialog.getSaveFileName(self, "Save Configurations", "config.json",
+                                                   "JSON Files (*.json)", options=options)
+        if file_name:
+            return file_name
+
+    def loadFileDialog(self):
+        options = QtWidgets.QFileDialog.Options()
+        options |= QtWidgets.QFileDialog.DontUseNativeDialog
+        file_name, _ = QtWidgets.QFileDialog.getOpenFileName(self, "Load Configurations", "config.json",
+                                                   "JSON Files (*.json)", options=options)
+        if file_name:
+            return file_name
+    
+    def save_click(self):
+        filename = self.saveFileDialog()
+        if filename:
+            data = []
+            for page in self.pages:
+                data.append(page.get_config())
+            dump_json(filename, data)
+
+    def load_click(self):
+        filename = self.loadFileDialog()
+        if filename:
+            data = load_json(filename)
+            for index,page in enumerate(self.pages):
+                page.set_config(data[index])
+                
 
 
 if __name__ == '__main__':

@@ -13,14 +13,13 @@ GOOD_CHARS = good_chars()
 class FirstPage(QtWidgets.QWidget):
     def __init__(self, start_addr=0, text_addr=0, text_len=9, port=None):
         super(FirstPage, self).__init__()
-        uic.loadUi('first_page.ui', self)
+        uic.loadUi('new_first_page.ui', self)
         self.port = port
         self.start_addr = start_addr
         self.text_addr = text_addr
         self.text_len = text_len
         self.write_btn.clicked.connect(self.write_eeprom)
         self.update_btn.clicked.connect(self.read_eeprom)
-        self.hidden_random.setEnabled(True)
 
     def write_text(self, ser,  addr, size, text):
         text = [i for i in text if i in GOOD_CHARS]
@@ -213,6 +212,39 @@ class FirstPage(QtWidgets.QWidget):
                 ser.update_ref(80, self.start_addr,
                                self.program_scene_fun1.currentIndex())
 
+                ############################################################
+
+                ser.update_ref(81,  self.start_addr,
+                               self.spinBox_EXPEDMIDCH_2.value())
+
+                ser.update_ref(82, self.start_addr,
+                               self.onoffVslider.currentIndex())
+                ser.update_ref(83,  self.start_addr,
+                               self.spinBox_VSLID_EXPPED_3.value())
+                ser.update_ref(84,  self.start_addr,
+                               self.spinBox_VSLIDSWITCH_3.value())
+                ser.update_ref(85,  self.start_addr,
+                               self.spinBox_VSLIDAUTOON_3.value())
+                ser.update_ref(86,  self.start_addr,
+                               self.spinBox_VSLIDAUTOFF_3.value())
+                ser.update_ref(87,  self.start_addr,
+                               self.spinBox_VSLIDMIDCH_3.value())
+
+                ser.update_ref(88, self.start_addr,
+                               self.onoffSlider.currentIndex())
+                ser.update_ref(89,  self.start_addr,
+                               self.spinBox_EXPPED.value())
+                ser.update_ref(90,  self.start_addr,
+                               self.spinBox_EXPEDSWITCH.value())
+                ser.update_ref(91,  self.start_addr,
+                               self.spinBox_EXPEDAUTOON.value())
+                ser.update_ref(92,  self.start_addr,
+                               self.spinBox_EXPEDAUTOFF.value())
+                ser.update_ref(93,  self.start_addr,
+                               self.spinBox_EXPEDMIDCH.value())
+
+                ###################################
+
                 self.write_text(ser, self.text_addr,
                                 self.text_len, self.bank_name.text())
 
@@ -359,6 +391,39 @@ class FirstPage(QtWidgets.QWidget):
                 self.set_dropdown(self.program_scene_fun1, 2,
                                   ser.get_ref(80, self.start_addr))
 
+                ############################################################
+
+                self.spinBox_EXPEDMIDCH_2.setValue(
+                    ser.get_ref(81,  self.start_addr))
+
+                self.set_dropdown(self.onoffVslider, 2,
+                                  ser.get_ref(82, self.start_addr))
+                self.spinBox_VSLID_EXPPED_3.setValue(
+                    ser.get_ref(83,  self.start_addr))
+                self.spinBox_VSLIDSWITCH_3.setValue(
+                    ser.get_ref(84,  self.start_addr))
+                self.spinBox_VSLIDAUTOON_3.setValue(
+                    ser.get_ref(85,  self.start_addr))
+                self.spinBox_VSLIDAUTOFF_3.setValue(
+                    ser.get_ref(86,  self.start_addr))
+                self.spinBox_VSLIDMIDCH_3.setValue(
+                    ser.get_ref(87,  self.start_addr))
+
+                self.set_dropdown(self.onoffSlider, 2,
+                                  ser.get_ref(88, self.start_addr))
+
+                self.spinBox_EXPPED.setValue(ser.get_ref(89,  self.start_addr))
+                self.spinBox_EXPEDSWITCH.setValue(
+                    ser.get_ref(90,  self.start_addr))
+                self.spinBox_EXPEDAUTOON.setValue(
+                    ser.get_ref(91,  self.start_addr))
+                self.spinBox_EXPEDAUTOFF.setValue(
+                    ser.get_ref(92,  self.start_addr))
+                self.spinBox_EXPEDMIDCH.setValue(
+                    ser.get_ref(93,  self.start_addr))
+
+                ###################################
+
                 bank = self.read_text(ser, self.text_addr, self.text_len)
                 if bank == ' ' * self.text_len:
                     self.bank_name.setText("*" * self.text_len)
@@ -369,6 +434,122 @@ class FirstPage(QtWidgets.QWidget):
             except Exception as e:
                 print(e)
         self.update_btn.clearFocus()
+
+    def get_config(self):
+        data = {}
+        data["spinBox_PC1_1"] = self.spinBox_PC1_1.value()
+        data["spinBox_PC1_2"] = self.spinBox_PC1_2.value()
+        data["spinBox_PC1_3"] = self.spinBox_PC1_3.value()
+        data["spinBox_PC1_4"] = self.spinBox_PC1_4.value()
+        data["spinBox_PC1_5"] = self.spinBox_PC1_5.value()
+        data["spinBox_PC1_6"] = self.spinBox_PC1_6.value()
+        data["spinBox_PC1_7"] = self.spinBox_PC1_7.value()
+        data["spinBox_PC1_8"] = self.spinBox_PC1_8.value()
+        data["spinBox_PC1_9"] = self.spinBox_PC1_9.value()
+        data["spinBox_PC1_10"] = self.spinBox_PC1_10.value()
+
+        data["spinBox_CC1_1"] = self.spinBox_CC1_1.value()
+        data["spinBox_CC1_1"] = self.spinBox_CC1_2.value()
+        data["spinBox_CC1_3"] = self.spinBox_CC1_3.value()
+        data["spinBox_CC1_4"] = self.spinBox_CC1_4.value()
+        data["spinBox_CC1_4"] = self.spinBox_CC1_5.value()
+        data["spinBox_CC1_6"] = self.spinBox_CC1_6.value()
+        data["spinBox_CC1_7"] = self.spinBox_CC1_7.value()
+        data["spinBox_CC1_8"] = self.spinBox_CC1_8.value()
+        data["spinBox_CC1_8"] = self.spinBox_CC1_9.value()
+        data["spinBox_CC1_10"] = self.spinBox_CC1_10.value()
+        data["spinBox_CC2_1"] = self.spinBox_CC2_1.value()
+        data["spinBox_CC2_2"] = self.spinBox_CC2_2.value()
+        data["spinBox_CC2_3"] = self.spinBox_CC2_3.value()
+        data["spinBox_CC2_4"] = self.spinBox_CC2_4.value()
+        data["spinBox_CC2_5"] = self.spinBox_CC2_5.value()
+        data["spinBox_CC2_6"] = self.spinBox_CC2_6.value()
+        data["spinBox_CC2_7"] = self.spinBox_CC2_7.value()
+        data["spinBox_CC2_8"] = self.spinBox_CC2_8.value()
+        data["spinBox_CC2_9"] = self.spinBox_CC2_9.value()
+        data["spinBox_CC2_10"] = self.spinBox_CC2_10.value()
+        data["spinBox_CC3_1"] = self.spinBox_CC3_1.value()
+        data["spinBox_CC3_2"] = self.spinBox_CC3_2.value()
+        data["spinBox_CC3_3"] = self.spinBox_CC3_3.value()
+        data["spinBox_CC3_4"] = self.spinBox_CC3_4.value()
+        data["spinBox_CC3_5"] = self.spinBox_CC3_5.value()
+        data["spinBox_CC3_6"] = self.spinBox_CC3_6.value()
+        data["spinBox_CC3_7"] = self.spinBox_CC3_7.value()
+        data["spinBox_CC3_8"] = self.spinBox_CC3_8.value()
+        data["spinBox_CC3_9"] = self.spinBox_CC3_9.value()
+        data["spinBox_CC3_10"] = self.spinBox_CC3_10.value()
+        data["presetLabel1_1"] = self.presetLabel1_1.currentIndex()
+        data["presetLabel1_2"] = self.presetLabel1_2.currentIndex()
+        data["presetLabel1_3"] = self.presetLabel1_3.currentIndex()
+        data["presetLabel1_4"] = self.presetLabel1_4.currentIndex()
+        data["presetLabel1_5"] = self.presetLabel1_5.currentIndex()
+        data["presetLabel1_6"] = self.presetLabel1_6.currentIndex()
+        data["presetLabel1_7"] = self.presetLabel1_7.currentIndex()
+        data["presetLabel1_8"] = self.presetLabel1_8.currentIndex()
+        data["presetLabel1_8"] = self.presetLabel1_9.currentIndex()
+        data["presetLabel1_10"] = self.presetLabel1_10.currentIndex()
+
+        data["onoff1_1"] = self.onoff1_1.currentIndex()
+        data["onoff1_2"] = self.onoff1_2.currentIndex()
+        data["onoff1_3"] = self.onoff1_3.currentIndex()
+        data["onoff1_4"] = self.onoff1_4.currentIndex()
+        data["onoff1_5"] = self.onoff1_5.currentIndex()
+        data["onoff1_6"] = self.onoff1_6.currentIndex()
+        data["onoff1_7"] = self.onoff1_7.currentIndex()
+        data["onoff1_8"] = self.onoff1_8.currentIndex()
+        data["onoff1_9"] = self.onoff1_9.currentIndex()
+        data["onoff1_10"] = self.onoff1_10.currentIndex()
+        data["onoff2_1"] = self.onoff2_1.currentIndex()
+        data["onoff2_2"] = self.onoff2_2.currentIndex()
+        data["onoff2_3"] = self.onoff2_3.currentIndex()
+        data["onoff2_4"] = self.onoff2_4.currentIndex()
+        data["onoff2_5"] = self.onoff2_5.currentIndex()
+        data["onoff2_6"] = self.onoff2_6.currentIndex()
+        data["onoff2_7"] = self.onoff2_7.currentIndex()
+        data["onoff2_8"] = self.onoff2_8.currentIndex()
+        data["onoff2_8"] = self.onoff2_9.currentIndex()
+        data["onoff2_10"] = self.onoff2_10.currentIndex()
+        data["onoff3_1"] = self.onoff3_1.currentIndex()
+        data["onoff3_2"] = self.onoff3_2.currentIndex()
+        data["onoff3_3"] = self.onoff3_3.currentIndex()
+        data["onoff3_4"] = self.onoff3_4.currentIndex()
+        data["onoff3_5"] = self.onoff3_5.currentIndex()
+        data["onoff3_6"] = self.onoff3_6.currentIndex()
+        data["onoff3_7"] = self.onoff3_7.currentIndex()
+        data["onoff3_8"] = self.onoff3_8.currentIndex()
+        data["onoff3_9"] = self.onoff3_9.currentIndex()
+        data["onoff3_10"] = self.onoff3_10.currentIndex()
+        data["onoff3_10"] = self.program_scene_fun1.currentIndex()
+
+        ############################################################
+
+        data["spinBox_EXPEDMIDCH_2"] = self.spinBox_EXPEDMIDCH_2.value()
+        data["onoffVslider"] = self.onoffVslider.currentIndex()
+        data["spinBox_VSLID_EXPPED_3"] = self.spinBox_VSLID_EXPPED_3.value()
+        data["spinBox_VSLIDSWITCH_3"] = self.spinBox_VSLIDSWITCH_3.value()
+        data["spinBox_VSLIDAUTOON_3"] = self.spinBox_VSLIDAUTOON_3.value()
+        data["spinBox_VSLIDAUTOFF_3"] = self.spinBox_VSLIDAUTOFF_3.value()
+        data["spinBox_VSLIDMIDCH_3"] = self.spinBox_VSLIDMIDCH_3.value()
+        data["spinBox_VSLIDMIDCH_3"] = self.onoffSlider.currentIndex()
+        data["spinBox_EXPPED"] = self.spinBox_EXPPED.value()
+        data["spinBox_EXPEDSWITCH"] = self.spinBox_EXPEDSWITCH.value()
+        data["spinBox_EXPEDAUTOON"] = self.spinBox_EXPEDAUTOON.value()
+        data["spinBox_EXPEDAUTOFF"] = self.spinBox_EXPEDAUTOFF.value()
+        data["spinBox_EXPEDMIDCH"] = self.spinBox_EXPEDMIDCH.value()
+        ###################################
+        data["bank_name"] = self.bank_name.text()
+
+        return data
+
+    def set_config(self, data):
+        for key, value in data.items():
+            obj = eval(f'self.{key}')
+            if isinstance(obj, QtWidgets.QLineEdit):
+                obj.setText(value)
+            elif isinstance(obj, QtWidgets.QSpinBox):
+                obj.setValue(value)
+            elif isinstance(obj, QtWidgets.QComboBox):
+                obj.setCurrentIndex(value)
 
     def set_port(self, port):
         self.port = port

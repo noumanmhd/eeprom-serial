@@ -1,3 +1,5 @@
+
+import json
 import string
 from serial.tools.list_ports import comports
 
@@ -12,6 +14,16 @@ def get_ports():
                 "product": port.product,
                 "device": port.device})
     return ports
+
+
+def dump_json(path, data):
+    with open(path, 'w') as f:
+        f.write(json.dumps(data, indent=4))
+
+
+def load_json(path):
+    with open(path, 'r') as f:
+        return json.loads(f.read())
 
 
 def good_chars():
