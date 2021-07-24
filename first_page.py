@@ -39,6 +39,12 @@ class FirstPage(QtWidgets.QWidget):
             text += [' '] * (size - len(text))
         return ''.join(text)
 
+    def set_dropdown(self, obj, size, value):
+        if value < size:
+            obj.setCurrentIndex(value)
+        else:
+            obj.setCurrentIndex(0)
+
     def write_eeprom(self):
         if self.port != None:
             self.write_btn.setEnabled(True)
@@ -119,7 +125,97 @@ class FirstPage(QtWidgets.QWidget):
                                self.spinBox_CC3_9.value())
                 ser.update_ref(39,  self.start_addr,
                                self.spinBox_CC3_10.value())
-                self.write_text(ser, self.text_addr, self.text_len, self.bank_name.text())
+
+                ser.update_ref(40, self.start_addr,
+                               self.presetLabel1_1.currentIndex())
+                ser.update_ref(41, self.start_addr,
+                               self.presetLabel1_2.currentIndex())
+                ser.update_ref(42, self.start_addr,
+                               self.presetLabel1_3.currentIndex())
+                ser.update_ref(43, self.start_addr,
+                               self.presetLabel1_4.currentIndex())
+                ser.update_ref(44, self.start_addr,
+                               self.presetLabel1_5.currentIndex())
+                ser.update_ref(45, self.start_addr,
+                               self.presetLabel1_6.currentIndex())
+                ser.update_ref(46, self.start_addr,
+                               self.presetLabel1_7.currentIndex())
+                ser.update_ref(47, self.start_addr,
+                               self.presetLabel1_8.currentIndex())
+                ser.update_ref(48, self.start_addr,
+                               self.presetLabel1_9.currentIndex())
+                ser.update_ref(49, self.start_addr,
+                               self.presetLabel1_10.currentIndex())
+
+                ser.update_ref(50, self.start_addr,
+                               self.onoff1_1.currentIndex())
+                ser.update_ref(51, self.start_addr,
+                               self.onoff1_2.currentIndex())
+                ser.update_ref(52, self.start_addr,
+                               self.onoff1_3.currentIndex())
+                ser.update_ref(53, self.start_addr,
+                               self.onoff1_4.currentIndex())
+                ser.update_ref(54, self.start_addr,
+                               self.onoff1_5.currentIndex())
+                ser.update_ref(55, self.start_addr,
+                               self.onoff1_6.currentIndex())
+                ser.update_ref(56, self.start_addr,
+                               self.onoff1_7.currentIndex())
+                ser.update_ref(57, self.start_addr,
+                               self.onoff1_8.currentIndex())
+                ser.update_ref(58, self.start_addr,
+                               self.onoff1_9.currentIndex())
+                ser.update_ref(59, self.start_addr,
+                               self.onoff1_10.currentIndex())
+
+                ser.update_ref(60, self.start_addr,
+                               self.onoff2_1.currentIndex())
+                ser.update_ref(61, self.start_addr,
+                               self.onoff2_2.currentIndex())
+                ser.update_ref(62, self.start_addr,
+                               self.onoff2_3.currentIndex())
+                ser.update_ref(63, self.start_addr,
+                               self.onoff2_4.currentIndex())
+                ser.update_ref(64, self.start_addr,
+                               self.onoff2_5.currentIndex())
+                ser.update_ref(65, self.start_addr,
+                               self.onoff2_6.currentIndex())
+                ser.update_ref(66, self.start_addr,
+                               self.onoff2_7.currentIndex())
+                ser.update_ref(67, self.start_addr,
+                               self.onoff2_8.currentIndex())
+                ser.update_ref(68, self.start_addr,
+                               self.onoff2_9.currentIndex())
+                ser.update_ref(69, self.start_addr,
+                               self.onoff2_10.currentIndex())
+
+                ser.update_ref(70, self.start_addr,
+                               self.onoff3_1.currentIndex())
+                ser.update_ref(71, self.start_addr,
+                               self.onoff3_2.currentIndex())
+                ser.update_ref(72, self.start_addr,
+                               self.onoff3_3.currentIndex())
+                ser.update_ref(73, self.start_addr,
+                               self.onoff3_4.currentIndex())
+                ser.update_ref(74, self.start_addr,
+                               self.onoff3_5.currentIndex())
+                ser.update_ref(75, self.start_addr,
+                               self.onoff3_6.currentIndex())
+                ser.update_ref(76, self.start_addr,
+                               self.onoff3_7.currentIndex())
+                ser.update_ref(77, self.start_addr,
+                               self.onoff3_8.currentIndex())
+                ser.update_ref(78, self.start_addr,
+                               self.onoff3_9.currentIndex())
+                ser.update_ref(79, self.start_addr,
+                               self.onoff3_10.currentIndex())
+
+                ser.update_ref(80, self.start_addr,
+                               self.program_scene_fun1.currentIndex())
+
+                self.write_text(ser, self.text_addr,
+                                self.text_len, self.bank_name.text())
+
                 ser.close()
 
             except Exception as e:
@@ -175,6 +271,93 @@ class FirstPage(QtWidgets.QWidget):
                 self.spinBox_CC3_8.setValue(ser.get_ref(37,  self.start_addr))
                 self.spinBox_CC3_9.setValue(ser.get_ref(38,  self.start_addr))
                 self.spinBox_CC3_10.setValue(ser.get_ref(39,  self.start_addr))
+
+                self.set_dropdown(self.presetLabel1_1, 6,
+                                  ser.get_ref(40, self.start_addr))
+                self.set_dropdown(self.presetLabel1_2, 6,
+                                  ser.get_ref(41, self.start_addr))
+                self.set_dropdown(self.presetLabel1_3, 6,
+                                  ser.get_ref(42, self.start_addr))
+                self.set_dropdown(self.presetLabel1_4, 6,
+                                  ser.get_ref(43, self.start_addr))
+                self.set_dropdown(self.presetLabel1_5, 6,
+                                  ser.get_ref(44, self.start_addr))
+                self.set_dropdown(self.presetLabel1_6, 6,
+                                  ser.get_ref(45, self.start_addr))
+                self.set_dropdown(self.presetLabel1_7, 6,
+                                  ser.get_ref(46, self.start_addr))
+                self.set_dropdown(self.presetLabel1_8, 6,
+                                  ser.get_ref(47, self.start_addr))
+                self.set_dropdown(self.presetLabel1_9, 6,
+                                  ser.get_ref(48, self.start_addr))
+                self.set_dropdown(self.presetLabel1_10, 6,
+                                  ser.get_ref(49, self.start_addr))
+
+                self.set_dropdown(self.onoff1_1, 2,
+                                  ser.get_ref(50, self.start_addr))
+                self.set_dropdown(self.onoff1_2, 2,
+                                  ser.get_ref(51, self.start_addr))
+                self.set_dropdown(self.onoff1_3, 2,
+                                  ser.get_ref(52, self.start_addr))
+                self.set_dropdown(self.onoff1_4, 2,
+                                  ser.get_ref(53, self.start_addr))
+                self.set_dropdown(self.onoff1_5, 2,
+                                  ser.get_ref(54, self.start_addr))
+                self.set_dropdown(self.onoff1_6, 2,
+                                  ser.get_ref(55, self.start_addr))
+                self.set_dropdown(self.onoff1_7, 2,
+                                  ser.get_ref(56, self.start_addr))
+                self.set_dropdown(self.onoff1_8, 2,
+                                  ser.get_ref(57, self.start_addr))
+                self.set_dropdown(self.onoff1_9, 2,
+                                  ser.get_ref(58, self.start_addr))
+                self.set_dropdown(self.onoff1_10, 2,
+                                  ser.get_ref(59, self.start_addr))
+
+                self.set_dropdown(self.onoff2_1, 2,
+                                  ser.get_ref(60, self.start_addr))
+                self.set_dropdown(self.onoff2_2, 2,
+                                  ser.get_ref(61, self.start_addr))
+                self.set_dropdown(self.onoff2_3, 2,
+                                  ser.get_ref(62, self.start_addr))
+                self.set_dropdown(self.onoff2_4, 2,
+                                  ser.get_ref(63, self.start_addr))
+                self.set_dropdown(self.onoff2_5, 2,
+                                  ser.get_ref(64, self.start_addr))
+                self.set_dropdown(self.onoff2_6, 2,
+                                  ser.get_ref(65, self.start_addr))
+                self.set_dropdown(self.onoff2_7, 2,
+                                  ser.get_ref(66, self.start_addr))
+                self.set_dropdown(self.onoff2_8, 2,
+                                  ser.get_ref(67, self.start_addr))
+                self.set_dropdown(self.onoff2_9, 2,
+                                  ser.get_ref(68, self.start_addr))
+                self.set_dropdown(self.onoff2_10, 2,
+                                  ser.get_ref(69, self.start_addr))
+
+                self.set_dropdown(self.onoff3_1, 2,
+                                  ser.get_ref(70, self.start_addr))
+                self.set_dropdown(self.onoff3_2, 2,
+                                  ser.get_ref(71, self.start_addr))
+                self.set_dropdown(self.onoff3_3, 2,
+                                  ser.get_ref(72, self.start_addr))
+                self.set_dropdown(self.onoff3_4, 2,
+                                  ser.get_ref(73, self.start_addr))
+                self.set_dropdown(self.onoff3_5, 2,
+                                  ser.get_ref(74, self.start_addr))
+                self.set_dropdown(self.onoff3_6, 2,
+                                  ser.get_ref(75, self.start_addr))
+                self.set_dropdown(self.onoff3_7, 2,
+                                  ser.get_ref(76, self.start_addr))
+                self.set_dropdown(self.onoff3_8, 2,
+                                  ser.get_ref(77, self.start_addr))
+                self.set_dropdown(self.onoff3_9, 2,
+                                  ser.get_ref(78, self.start_addr))
+                self.set_dropdown(self.onoff3_10, 2,
+                                  ser.get_ref(79, self.start_addr))
+
+                self.set_dropdown(self.program_scene_fun1, 2,
+                                  ser.get_ref(80, self.start_addr))
 
                 bank = self.read_text(ser, self.text_addr, self.text_len)
                 if bank == ' ' * self.text_len:

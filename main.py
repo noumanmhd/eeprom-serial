@@ -14,7 +14,8 @@ from custom_functions import get_ports
 NUMBER_OF_PAGES = 5
 
 # Number of memory addresses for each page
-PAGE_MEMORY = 75
+PAGE_MEMORY = 85
+FIRST_PAGE_MEMORY = 95
 
 TEXT_ADDR = 1850
 TEXT_LEN = 9
@@ -72,7 +73,7 @@ class MainWidget(QtWidgets.QWidget):
         self.tabs.addTab(self.pages[0], f'Page 1')
         for i in range(1, NUMBER_OF_PAGES):
             self.pages.append(Page(
-                start_addr=(i*PAGE_MEMORY), 
+                start_addr=(i*PAGE_MEMORY) + FIRST_PAGE_MEMORY, 
                 text_addr=(TEXT_ADDR + (i*TEXT_LEN)), 
                 text_len=TEXT_LEN))
             self.tabs.addTab(self.pages[i], f'Page {i+1}')
