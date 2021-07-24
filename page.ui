@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1191</width>
-    <height>584</height>
+    <width>1211</width>
+    <height>640</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -15,12 +15,6 @@
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>1211</width>
-    <height>640</height>
-   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -39,7 +33,7 @@ background-color: rgb(102, 102, 102);</string>
       <bool>true</bool>
      </property>
      <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
@@ -59,6 +53,12 @@ background-color: rgb(102, 102, 102);</string>
         <height>461</height>
        </rect>
       </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(172, 202, 227);</string>
       </property>
@@ -66,7 +66,7 @@ background-color: rgb(102, 102, 102);</string>
        <item>
         <widget class="QLabel" name="label_BankPC1_1">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -84,6 +84,12 @@ background-color: rgb(102, 102, 102);</string>
        </item>
        <item>
         <widget class="QComboBox" name="presetLabel1_1">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -127,6 +133,12 @@ background-color: rgb(102, 102, 102);</string>
        </item>
        <item>
         <widget class="Line" name="line_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -135,7 +147,7 @@ background-color: rgb(102, 102, 102);</string>
        <item>
         <widget class="QLabel" name="label_PC1_1">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -154,7 +166,7 @@ background-color: rgb(102, 102, 102);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_PC1_1">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -184,6 +196,12 @@ background-color: rgb(102, 102, 102);</string>
        </item>
        <item>
         <widget class="Line" name="line_12">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -192,7 +210,7 @@ background-color: rgb(102, 102, 102);</string>
        <item>
         <widget class="QLabel" name="label_CC1_1">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -211,7 +229,7 @@ background-color: rgb(102, 102, 102);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC1_1">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -241,6 +259,12 @@ background-color: rgb(102, 102, 102);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff1_1">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -270,6 +294,12 @@ background-color: rgb(102, 102, 102);</string>
        </item>
        <item>
         <widget class="Line" name="line_22">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -278,7 +308,7 @@ background-color: rgb(102, 102, 102);</string>
        <item>
         <widget class="QLabel" name="label_CC2_1">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -297,7 +327,7 @@ background-color: rgb(102, 102, 102);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC2_1">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -327,6 +357,12 @@ background-color: rgb(102, 102, 102);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff2_1">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -356,6 +392,12 @@ background-color: rgb(102, 102, 102);</string>
        </item>
        <item>
         <widget class="Line" name="line_23">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -364,7 +406,7 @@ background-color: rgb(102, 102, 102);</string>
        <item>
         <widget class="QLabel" name="label_CC3_1">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -383,7 +425,7 @@ background-color: rgb(102, 102, 102);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC3_1">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -413,6 +455,12 @@ background-color: rgb(102, 102, 102);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff3_1">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -451,6 +499,12 @@ background-color: rgb(102, 102, 102);</string>
         <height>461</height>
        </rect>
       </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(179, 179, 179);
 background-color: rgb(204, 204, 204);</string>
@@ -459,7 +513,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_BankPC1_2">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -477,6 +531,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="presetLabel1_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -520,6 +580,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -528,7 +594,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_PC1_2">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -547,7 +613,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_PC1_2">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -577,6 +643,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_13">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -585,7 +657,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC1_2">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -604,7 +676,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC1_2">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -634,6 +706,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff1_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -663,6 +741,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_24">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -671,7 +755,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC2_2">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -690,7 +774,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC2_2">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -720,6 +804,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff2_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -749,6 +839,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_25">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -757,7 +853,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC3_2">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -776,7 +872,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC3_2">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -806,6 +902,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff3_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -844,6 +946,12 @@ background-color: rgb(204, 204, 204);</string>
         <height>461</height>
        </rect>
       </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(204, 204, 204);</string>
       </property>
@@ -851,7 +959,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_BankPC1_4">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -869,6 +977,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="presetLabel1_4">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -912,6 +1026,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_5">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -920,7 +1040,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_PC1_4">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -939,7 +1059,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_PC1_4">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -969,6 +1089,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_15">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -977,7 +1103,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC1_4">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -996,7 +1122,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC1_4">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1026,6 +1152,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff1_4">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1055,6 +1187,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_46">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -1063,7 +1201,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC2_4">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1082,7 +1220,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC2_4">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1112,6 +1250,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff2_4">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1141,6 +1285,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_33">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -1149,7 +1299,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC3_4">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1168,7 +1318,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC3_4">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1198,6 +1348,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff3_4">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1236,6 +1392,12 @@ background-color: rgb(204, 204, 204);</string>
         <height>461</height>
        </rect>
       </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(172, 202, 227);</string>
       </property>
@@ -1243,7 +1405,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_BankPC1_5">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1261,6 +1423,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="presetLabel1_5">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1304,6 +1472,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_6">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -1312,7 +1486,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_PC1_5">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1331,7 +1505,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_PC1_5">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1361,6 +1535,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_16">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -1369,7 +1549,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC1_5">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1388,7 +1568,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC1_5">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1418,6 +1598,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff1_5">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1447,6 +1633,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_45">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -1455,7 +1647,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC2_5">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1474,7 +1666,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC2_5">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1504,6 +1696,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff2_5">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1533,6 +1731,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_34">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -1541,7 +1745,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC3_5">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1560,7 +1764,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC3_5">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1590,6 +1794,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff3_5">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1628,6 +1838,12 @@ background-color: rgb(204, 204, 204);</string>
         <height>461</height>
        </rect>
       </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(204, 204, 204);</string>
       </property>
@@ -1635,7 +1851,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_BankPC1_6">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1653,6 +1869,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="presetLabel1_6">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1696,6 +1918,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_7">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -1704,7 +1932,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_PC1_6">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1723,7 +1951,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_PC1_6">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1753,6 +1981,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_17">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -1761,7 +1995,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC1_6">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1780,7 +2014,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC1_6">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1810,6 +2044,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff1_6">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1839,6 +2079,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_44">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -1847,7 +2093,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC2_6">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1866,7 +2112,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC2_6">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1896,6 +2142,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff2_6">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1925,6 +2177,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_35">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -1933,7 +2191,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC3_6">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1952,7 +2210,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC3_6">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1982,6 +2240,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff3_6">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -2020,6 +2284,12 @@ background-color: rgb(204, 204, 204);</string>
         <height>461</height>
        </rect>
       </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(172, 202, 227);</string>
       </property>
@@ -2027,7 +2297,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_BankPC1_7">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2045,6 +2315,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="presetLabel1_7">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -2088,6 +2364,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_8">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -2096,7 +2378,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_PC1_7">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2115,7 +2397,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_PC1_7">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2145,6 +2427,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_18">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -2153,7 +2441,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC1_7">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2172,7 +2460,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC1_7">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2202,6 +2490,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff1_7">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -2231,6 +2525,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_43">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -2239,7 +2539,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC2_7">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2258,7 +2558,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC2_7">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2288,6 +2588,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff2_7">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -2317,6 +2623,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_36">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -2325,7 +2637,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC3_7">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2344,7 +2656,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC3_7">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2374,6 +2686,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff3_7">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -2412,6 +2730,12 @@ background-color: rgb(204, 204, 204);</string>
         <height>461</height>
        </rect>
       </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(204, 204, 204);</string>
       </property>
@@ -2419,7 +2743,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_BankPC1_8">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2437,6 +2761,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="presetLabel1_8">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -2480,6 +2810,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_9">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -2488,7 +2824,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_PC1_8">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2507,7 +2843,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_PC1_8">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2537,6 +2873,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_19">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -2545,7 +2887,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC1_8">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2564,7 +2906,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC1_8">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2594,6 +2936,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff1_8">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -2623,6 +2971,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_42">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -2631,7 +2985,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC2_8">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2650,7 +3004,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC2_8">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2680,6 +3034,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff2_8">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -2709,6 +3069,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_37">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -2717,7 +3083,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC3_8">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2736,7 +3102,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC3_8">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2766,6 +3132,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff3_8">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -2804,6 +3176,12 @@ background-color: rgb(204, 204, 204);</string>
         <height>461</height>
        </rect>
       </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(172, 202, 227);</string>
       </property>
@@ -2811,7 +3189,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_BankPC1_9">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2829,6 +3207,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="presetLabel1_9">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -2872,6 +3256,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_10">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -2880,7 +3270,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_PC1_9">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2899,7 +3289,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_PC1_9">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2929,6 +3319,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_20">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -2937,7 +3333,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC1_9">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2956,7 +3352,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC1_9">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -2986,6 +3382,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff1_9">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -3015,6 +3417,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_41">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -3023,7 +3431,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC2_9">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3042,7 +3450,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC2_9">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3072,6 +3480,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff2_9">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -3101,6 +3515,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_38">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -3109,7 +3529,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC3_9">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3128,7 +3548,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC3_9">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3158,6 +3578,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff3_9">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -3196,6 +3622,12 @@ background-color: rgb(204, 204, 204);</string>
         <height>461</height>
        </rect>
       </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(172, 202, 227);</string>
       </property>
@@ -3203,7 +3635,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_BankPC1_3">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3221,6 +3653,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="presetLabel1_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -3264,6 +3702,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_4">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -3272,7 +3716,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_PC1_3">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3291,7 +3735,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_PC1_3">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3321,6 +3765,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_14">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -3329,7 +3779,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC1_3">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3348,7 +3798,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC1_3">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3378,6 +3828,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff1_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -3407,6 +3863,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_30">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -3415,7 +3877,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC2_3">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3434,7 +3896,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC2_3">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3464,6 +3926,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff2_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -3493,6 +3961,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_32">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -3501,7 +3975,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC3_3">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3520,7 +3994,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC3_3">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3550,6 +4024,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff3_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -3601,7 +4081,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_BankPC1_10">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3619,6 +4099,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="presetLabel1_10">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -3662,6 +4148,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_11">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -3670,7 +4162,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_PC1_10">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3689,7 +4181,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_PC1_10">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3719,6 +4211,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_21">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -3727,7 +4225,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC1_10">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3746,7 +4244,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC1_10">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3776,6 +4274,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff1_10">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -3805,6 +4309,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_40">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -3813,7 +4323,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC2_10">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3832,7 +4342,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC2_10">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3862,6 +4372,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff2_10">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -3891,6 +4407,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="Line" name="line_39">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -3899,7 +4421,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QLabel" name="label_CC3_10">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3918,7 +4440,7 @@ background-color: rgb(204, 204, 204);</string>
        <item>
         <widget class="QSpinBox" name="spinBox_CC3_10">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -3948,6 +4470,12 @@ background-color: rgb(204, 204, 204);</string>
        </item>
        <item>
         <widget class="QComboBox" name="onoff3_10">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -3977,42 +4505,6 @@ background-color: rgb(204, 204, 204);</string>
        </item>
       </layout>
      </widget>
-     <widget class="QPushButton" name="write_btn">
-      <property name="geometry">
-       <rect>
-        <x>1020</x>
-        <y>10</y>
-        <width>151</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 0, 0);
-color: rgb(255, 255, 255);
-font: 14pt &quot;Arial&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Write</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="update_btn">
-      <property name="geometry">
-       <rect>
-        <x>860</x>
-        <y>10</y>
-        <width>151</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(85, 255, 0);
-color: rgb(0, 0, 0);
-font: 14pt &quot;Arial&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Update</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_Instructions">
       <property name="geometry">
        <rect>
@@ -4023,7 +4515,7 @@ font: 14pt &quot;Arial&quot;;</string>
        </rect>
       </property>
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -4048,34 +4540,6 @@ color: rgb(0, 0, 0);</string>
        <string>For Each Bank you can have up to 10 different sound by setting Program Chages or Scenes in &quot;PC/SC&quot;box above</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="bank_name">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>11</y>
-        <width>251</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="toolTip">
-       <string>Click to Edit</string>
-      </property>
-      <property name="toolTipDuration">
-       <number>0</number>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QLineEdit{
-font: 24pt &quot;.SF NS Text&quot;;
-border: none;
-}</string>
-      </property>
-      <property name="text">
-       <string>BANK NAME</string>
-      </property>
-      <property name="maxLength">
-       <number>9</number>
-      </property>
-     </widget>
      <widget class="QLabel" name="hidden_random">
       <property name="geometry">
        <rect>
@@ -4085,78 +4549,183 @@ border: none;
         <height>18</height>
        </rect>
       </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QGroupBox" name="formGroupBox_3">
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>10</y>
-        <width>501</width>
-        <height>41</height>
-       </rect>
-      </property>
       <property name="sizePolicy">
-       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 173, 173);</string>
+      <property name="text">
+       <string/>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_5">
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1201</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMaximumSize</enum>
+       </property>
        <item>
-        <widget class="QLabel" name="label_Bank3">
+        <widget class="QLineEdit" name="bank_name">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
-         <property name="minimumSize">
-          <size>
-           <width>150</width>
-           <height>28</height>
-          </size>
+         <property name="toolTip">
+          <string>Click to Edit</string>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>30</height>
-          </size>
+         <property name="toolTipDuration">
+          <number>0</number>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit{
+font: 24pt &quot;.SF NS Text&quot;;
+border: none;
+}</string>
          </property>
          <property name="text">
-          <string>SET PROG CH/SCENES</string>
+          <string>BANK NAME</string>
+         </property>
+         <property name="maxLength">
+          <number>9</number>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="program_scene_fun1">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="formGroupBox_3">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
-         <property name="minimumSize">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(170, 173, 173);</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_Bank3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>28</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>SET PROG CH/SCENES</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="program_scene_fun1">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>28</height>
+             </size>
+            </property>
+            <item>
+             <property name="text">
+              <string>PROGR CH</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>SCENES</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
           <size>
-           <width>0</width>
-           <height>28</height>
+           <width>40</width>
+           <height>20</height>
           </size>
          </property>
-         <item>
-          <property name="text">
-           <string>PROGR CH</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>SCENES</string>
-          </property>
-         </item>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="update_btn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(85, 255, 0);
+color: rgb(0, 0, 0);
+font: 14pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Update</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="write_btn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 0, 0);
+color: rgb(255, 255, 255);
+font: 14pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Write</string>
+         </property>
         </widget>
        </item>
       </layout>

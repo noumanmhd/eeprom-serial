@@ -8,30 +8,31 @@ from get_data import SerialData
 from custom_functions import good_chars
 
 GOOD_CHARS = good_chars()
-TEXT_LEN = 9
 
 
 class Page(QtWidgets.QWidget):
-    def __init__(self, start_addr=0, port=None):
+    def __init__(self, start_addr=0, text_addr=0, text_len=9, port=None):
         super(Page, self).__init__()
-        uic.loadUi('page.ui', self)
+        uic.loadUi('new_page.ui', self)
         self.port = port
         self.start_addr = start_addr
+        self.text_addr = text_addr
+        self.text_len = text_len
         self.write_btn.clicked.connect(self.write_eeprom)
         self.update_btn.clicked.connect(self.read_eeprom)
-        self.hidden_random.setEnabled(True)
+        
 
     def write_text(self, ser,  addr, size, text):
         text = [i for i in text if i in GOOD_CHARS]
         if len(text) < size:
             text += [' '] * (size - len(text))  # Add Padding to text
         for i in range(size):
-            ser.update_ref(addr + i, self.start_addr, ord(text[i]))
+            ser.update(addr + i, ord(text[i]))
 
     def read_text(self, ser,  addr, size):
         text = []
         for i in range(size):
-            c = ser.get_ref(addr + i, self.start_addr)
+            c = ser.get(addr + i)
             text.append(chr(c))
         text = [i for i in text if i in GOOD_CHARS]
         if len(text) < size:
@@ -118,7 +119,7 @@ class Page(QtWidgets.QWidget):
                                self.spinBox_CC3_9.value())
                 ser.update_ref(39,  self.start_addr,
                                self.spinBox_CC3_10.value())
-                self.write_text(ser, 40, TEXT_LEN, self.bank_name.text())
+                self.write_text(ser, self.text_addr, self.text_len, self.bank_name.text())
                 ser.close()
 
             except Exception as e:
@@ -175,9 +176,9 @@ class Page(QtWidgets.QWidget):
                 self.spinBox_CC3_9.setValue(ser.get_ref(38,  self.start_addr))
                 self.spinBox_CC3_10.setValue(ser.get_ref(39,  self.start_addr))
 
-                bank = self.read_text(ser, 40, TEXT_LEN)
-                if bank == ' ' * TEXT_LEN:
-                    self.bank_name.setText("*" * TEXT_LEN)
+                bank = self.read_text(ser, self.text_addr, self.text_len)
+                if bank == ' ' * self.text_len:
+                    self.bank_name.setText("*" * self.text_len)
                 else:
                     self.bank_name.setText(bank.strip())
                 ser.close()

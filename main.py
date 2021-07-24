@@ -16,6 +16,9 @@ NUMBER_OF_PAGES = 5
 # Number of memory addresses for each page
 PAGE_MEMORY = 75
 
+TEXT_ADDR = 1850
+TEXT_LEN = 9
+
 
 class MainWidget(QtWidgets.QWidget):
     def __init__(self, parent=None):
@@ -65,10 +68,13 @@ class MainWidget(QtWidgets.QWidget):
     def add_pages(self):
         """ Function to add Pages and create there tabs """
         self.pages = []
-        self.pages.append(FirstPage(start_addr=0))
+        self.pages.append(FirstPage(start_addr=0, text_addr=TEXT_ADDR, text_len=TEXT_LEN))
         self.tabs.addTab(self.pages[0], f'Page 1')
         for i in range(1, NUMBER_OF_PAGES):
-            self.pages.append(Page(start_addr=(i*PAGE_MEMORY)))
+            self.pages.append(Page(
+                start_addr=(i*PAGE_MEMORY), 
+                text_addr=(TEXT_ADDR + (i*TEXT_LEN)), 
+                text_len=TEXT_LEN))
             self.tabs.addTab(self.pages[i], f'Page {i+1}')
 
     def set_ports(self):
@@ -105,7 +111,7 @@ if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     window = QtWidgets.QMainWindow()
     # window.setWindowState(QtCore.Qt.WindowMaximized)
-    window.setFixedSize(1220, 720)
+    window.setMinimumSize(1220, 720)
     qtRectangle = window.frameGeometry()
     centerPoint = QtWidgets.QDesktopWidget().availableGeometry().center()
     qtRectangle.moveCenter(centerPoint)
