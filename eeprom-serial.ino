@@ -8,11 +8,14 @@
 const unsigned long T_ADDR = 2048; // Memory Limit
 const unsigned int DATA_LEN = CMD_HEX + ADDR_HEX + VALUE_HEX;
 
+bool gui_mode = false;
+
 void setup()
 {
     Serial.begin(9600);
 }
 
+/* DO NOT CHANGE THE loop() CODE PLACE YOUR CODE IN hw_code() */
 void loop()
 {
     char cmd[DATA_LEN];
@@ -29,8 +32,27 @@ void loop()
             {
                 put_value(&cmd[0]);
             }
+            else if (cmd[0] == 'Y')
+            {
+                gui_mode = true;
+                Serial.println("{\"status\": true}");
+            }
+            else if (cmd[0] == 'N')
+            {
+                gui_mode = false;
+                Serial.println("{\"status\": true}");
+            }
         }
     }
+    else if (!gui_mode)
+    {
+        hw_code()
+    }
+}
+
+void hw_code()
+{
+    // Place your code here
 }
 
 unsigned long get_addr(char *cmd)

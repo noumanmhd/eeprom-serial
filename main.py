@@ -41,6 +41,11 @@ class MainWidget(QtWidgets.QWidget):
         self.detect_btn.clicked.connect(self.set_ports)
         ports_layout.addWidget(self.detect_btn)
 
+        self.connect_btn = QtWidgets.QPushButton('Connect', self)
+        self.connect_btn.setToolTip('Click to connect with board')
+        self.connect_btn.clicked.connect(self.connect_board)
+        ports_layout.addWidget(self.connect_btn)
+
         layout.addLayout(ports_layout)
 
         self.tabs = QtWidgets.QTabWidget()
@@ -69,6 +74,9 @@ class MainWidget(QtWidgets.QWidget):
         layout.addLayout(btns_layout)
         self.setLayout(layout)
         self.set_ports()
+
+    def connect_board(self):
+        pass
 
     def add_pages(self):
         """ Function to add Pages and create there tabs """
@@ -111,12 +119,12 @@ class MainWidget(QtWidgets.QWidget):
         for page in self.pages:
             page.read_eeprom()
         self.read_btn.clearFocus()
-    
+
     def saveFileDialog(self):
         options = QtWidgets.QFileDialog.Options()
         options |= QtWidgets.QFileDialog.DontUseNativeDialog
         file_name, _ = QtWidgets.QFileDialog.getSaveFileName(self, "Save Configurations", "config.json",
-                                                   "JSON Files (*.json)", options=options)
+                                                             "JSON Files (*.json)", options=options)
         if file_name:
             return file_name
 
@@ -124,10 +132,10 @@ class MainWidget(QtWidgets.QWidget):
         options = QtWidgets.QFileDialog.Options()
         options |= QtWidgets.QFileDialog.DontUseNativeDialog
         file_name, _ = QtWidgets.QFileDialog.getOpenFileName(self, "Load Configurations", "config.json",
-                                                   "JSON Files (*.json)", options=options)
+                                                             "JSON Files (*.json)", options=options)
         if file_name:
             return file_name
-    
+
     def save_click(self):
         filename = self.saveFileDialog()
         if filename:
@@ -140,9 +148,8 @@ class MainWidget(QtWidgets.QWidget):
         filename = self.loadFileDialog()
         if filename:
             data = load_json(filename)
-            for index,page in enumerate(self.pages):
+            for index, page in enumerate(self.pages):
                 page.set_config(data[index])
-                
 
 
 if __name__ == '__main__':
