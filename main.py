@@ -89,7 +89,7 @@ class MainWidget(QtWidgets.QWidget):
                 for page in self.pages:
                     page.set_port(self.selected_port)
                     page.read_eeprom()
-                
+
                 self.connect_btn.setText("Disconnect")
             else:
                 ser.connect()
@@ -98,9 +98,9 @@ class MainWidget(QtWidgets.QWidget):
                 self.set_ports()
                 self.refresh_tabs()
                 self.connect_btn.setText("Connect")
-            
+
             self.connect_btn.clearFocus()
-    
+
     def refresh_tabs(self):
         for _ in range(len(self.pages)):
             self.tabs.removeTab(0)
@@ -115,7 +115,7 @@ class MainWidget(QtWidgets.QWidget):
         self.tabs.addTab(self.pages[0], f'Page 1')
         for i in range(1, NUMBER_OF_PAGES):
             self.pages.append(Page(
-                start_addr=(i*PAGE_MEMORY) + FIRST_PAGE_MEMORY,
+                start_addr=((i-1)*PAGE_MEMORY) + FIRST_PAGE_MEMORY,
                 text_addr=(TEXT_ADDR + (i*TEXT_LEN)),
                 text_len=TEXT_LEN))
             self.tabs.addTab(self.pages[i], f'Page {i+1}')

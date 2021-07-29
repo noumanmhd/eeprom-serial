@@ -1,15 +1,13 @@
 ///////////////////////////////
 // Please Change the PIN (PA7)
 #define BTN_PIN PA7 
-#define GAP_DELAY 1000
+#define GAP_DELAY 500
 #define TAP_MAX_DELAY 400
 //////////////////////////////
 
 #define SAMPLES_SIZE 20
 #define SAMPLES_DELAY 1
 
-
-long count = 0;
 unsigned long t = 0;
 unsigned long dt = 0;
 
@@ -19,7 +17,7 @@ unsigned int hold = 0;
 
 void setup() {
   Serial.begin(9600);
-  pinMode(BTN_PIN, INPUT_PULLDOWN);
+  pinMode(BTN_PIN, INPUT_PULLUP);
 }
 
 void loop() {
@@ -33,7 +31,7 @@ void loop() {
       hold++;
     }
     t = millis();
-    dt = millis() - t;
+    dt = 0;
   }
  
   if(dt > GAP_DELAY){
@@ -56,7 +54,7 @@ bool readInput(byte pin){
     delay(SAMPLES_DELAY);
   }
   sum = round(sum/SAMPLES_SIZE);
-  return (sum == 1);
+  return (sum != 1);
 }
 
 unsigned long pressRoutine(){
