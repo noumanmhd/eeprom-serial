@@ -22,6 +22,26 @@ class SerialData:
                 pass
         return None
 
+    def connect(self):
+        cmd = f"Y{0:08X}\n".encode('utf-8')
+        for _ in range(RETRIES):
+            self.ser.write(cmd)
+            data = self.get_data()
+            if isinstance(data, dict):
+                if data['status']:
+                    return True
+        return False
+
+    def disconnect(self):
+        cmd = f"N{0:08X}\n".encode('utf-8')
+        for _ in range(RETRIES):
+            self.ser.write(cmd)
+            data = self.get_data()
+            if isinstance(data, dict):
+                if data['status']:
+                    return True
+        return False
+
     def update(self, addr, value):
         addr = abs(int(addr))
         value = abs(int(value))

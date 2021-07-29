@@ -9,6 +9,7 @@ from PyQt5 import QtWidgets
 # Local functions and classes
 from page import Page
 from first_page import FirstPage
+from get_data import SerialData
 from custom_functions import (
     get_ports,
     dump_json,
@@ -30,6 +31,9 @@ class MainWidget(QtWidgets.QWidget):
         super().__init__(parent)
 
         layout = QtWidgets.QVBoxLayout()
+
+        self.selected_port = False
+        self.connect_state = False
 
         ports_layout = QtWidgets.QHBoxLayout()
         self.p_list = QtWidgets.QComboBox()
@@ -76,7 +80,32 @@ class MainWidget(QtWidgets.QWidget):
         self.set_ports()
 
     def connect_board(self):
-        pass
+        if self.selected_port:
+            ser = SerialData(port=self.selected_port)
+            if not self.connect_state:
+                ser.connect()
+                ser.close()
+                self.connect_state = True
+                for page in self.pages:
+                    page.set_port(self.selected_port)
+                    page.read_eeprom()
+                
+                self.connect_btn.setText("Disconnect")
+            else:
+                ser.connect()
+                ser.close()
+                self.connect_state = False
+                self.set_ports()
+                self.refresh_tabs()
+                self.connect_btn.setText("Connect")
+            
+            self.connect_btn.clearFocus()
+    
+    def refresh_tabs(self):
+        for _ in range(len(self.pages)):
+            self.tabs.removeTab(0)
+        del self.pages
+        self.add_pages()
 
     def add_pages(self):
         """ Function to add Pages and create there tabs """
@@ -105,9 +134,7 @@ class MainWidget(QtWidgets.QWidget):
     def selection_change(self, value):
         if value > 0:
             port = self.ports[value - 1]["device"]
-            for page in self.pages:
-                page.set_port(port)
-                page.read_eeprom()
+            self.selected_port = port
         self.p_list.clearFocus()
 
     def write_all(self):

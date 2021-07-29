@@ -46,7 +46,7 @@ void loop()
     }
     else if (!gui_mode)
     {
-        hw_code()
+        hw_code();
     }
 }
 
