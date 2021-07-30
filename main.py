@@ -92,7 +92,7 @@ class MainWidget(QtWidgets.QWidget):
 
                 self.connect_btn.setText("Disconnect")
             else:
-                ser.connect()
+                ser.disconnect()
                 ser.close()
                 self.connect_state = False
                 self.set_ports()

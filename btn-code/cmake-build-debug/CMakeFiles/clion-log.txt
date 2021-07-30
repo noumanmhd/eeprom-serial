@@ -1,0 +1,6 @@
+/opt/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/noumanmhd/WorkSpace/eeprom-serial/btn-code
+-- Configuring done
+CMake Error: Cannot determine link language for target "btn_code".
+CMake Error: CMake can not determine linker language for target: btn_code
+-- Generating done
+CMake Generate step failed.  Build files cannot be regenerated correctly.
