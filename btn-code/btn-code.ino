@@ -4,18 +4,16 @@
 
 #include "custom_buttons.h"
 
-///////////////////////////////
 /******************************************************************************/
 #define CMD_HEX 1
 #define ADDR_HEX 4
 #define VALUE_HEX 4
-/******************************************************************************/
-// Please Change the PIN (PA7)
-#define BTN_PIN PA7
-#define GAP_DELAY 500
-#define TAP_MAX_DELAY 400
-//////////////////////////////
 
+/******************* Please Change the PINs ***********************************/
+#define BTN_1_PIN PA7
+#define BTN_2_PIN PA6
+#define BTN_3_PIN PA5
+#define BTN_4_PIN PA4
 /******************************************************************************/
 const unsigned long T_ADDR = 2048;  // Memory Limit
 const unsigned int DATA_LEN = CMD_HEX + ADDR_HEX + VALUE_HEX;
@@ -23,7 +21,10 @@ const unsigned int DATA_LEN = CMD_HEX + ADDR_HEX + VALUE_HEX;
 
 bool gui_mode = false;
 
-CustomButton btn1(BTN_PIN);
+CustomButton btn_1(BTN_1_PIN);
+CustomButton btn_2(BTN_2_PIN);
+CustomButton btn_3(BTN_3_PIN);
+CustomButton btn_4(BTN_4_PIN);
 
 void setup() { Serial.begin(9600); }
 /******************************************************************************/
@@ -94,20 +95,73 @@ void put_value(char *cmd) {
 /***************************** Button Code ************************************/
 /******************************************************************************/
 void btn_code() {
-  btn1.loop(stage_one, stage_two, stage_three, stage_four, stage_five,
-            stage_six, stage_seven);
+  btn_1.loop(btn_1_a, btn_1_b, btn_1_c, btn_1_d, btn_1_e, btn_1_f, btn_1_g);
+
+  btn_2.loop(btn_2_a, btn_2_b, btn_2_c, btn_2_d, btn_2_e, btn_2_f, btn_2_g);
+
+  btn_3.loop(btn_3_a, btn_3_b, btn_3_c, btn_3_d, btn_3_e, btn_3_f, btn_3_g);
+
+  btn_4.loop(btn_4_a, btn_4_b, btn_4_c, btn_4_d, btn_4_e, btn_4_f, btn_4_g);
 }
+/***************************** First Button ***********************************/
+void btn_1_a() { Serial.println("Button 1 Stage 1"); }
 
-void stage_one() { Serial.println("Stage 1"); }
+void btn_1_b() { Serial.println("Button 1 Stage 2"); }
 
-void stage_two() { Serial.println("Stage 2"); }
+void btn_1_c() { Serial.println("Button 1 Stage 3"); }
 
-void stage_three() { Serial.println("Stage 3"); }
+void btn_1_d() { Serial.println("Button 1 Stage 4"); }
 
-void stage_four() { Serial.println("Stage 4"); }
+void btn_1_e() { Serial.println("Button 1 Stage 5"); }
 
-void stage_five() { Serial.println("Stage 5"); }
+void btn_1_f() { Serial.println("Button 1 Stage 6"); }
 
-void stage_six() { Serial.println("Stage 6"); }
+void btn_1_g() { Serial.println("Button 1 Stage 7"); }
 
-void stage_seven() { Serial.println("Stage 7"); }
+/***************************** Second Button
+ * ***********************************/
+void btn_2_a() { Serial.println("Button 2 Stage 1"); }
+
+void btn_2_b() { Serial.println("Button 2 Stage 2"); }
+
+void btn_2_c() { Serial.println("Button 2 Stage 3"); }
+
+void btn_2_d() { Serial.println("Button 2 Stage 4"); }
+
+void btn_2_e() { Serial.println("Button 2 Stage 5"); }
+
+void btn_2_f() { Serial.println("Button 2 Stage 6"); }
+
+void btn_2_g() { Serial.println("Button 2 Stage 7"); }
+
+/***************************** Third Button ***********************************/
+void btn_3_a() { Serial.println("Button 3 Stage 1"); }
+
+void btn_3_b() { Serial.println("Button 3 Stage 2"); }
+
+void btn_3_c() { Serial.println("Button 3 Stage 3"); }
+
+void btn_3_d() { Serial.println("Button 3 Stage 4"); }
+
+void btn_3_e() { Serial.println("Button 3 Stage 5"); }
+
+void btn_3_f() { Serial.println("Button 3 Stage 6"); }
+
+void btn_3_g() { Serial.println("Button 3 Stage 7"); }
+
+/***************************** Fourth Button
+ * ***********************************/
+void btn_4_a() { Serial.println("Button 4 Stage 1"); }
+
+void btn_4_b() { Serial.println("Button 4 Stage 2"); }
+
+void btn_4_c() { Serial.println("Button 4 Stage 3"); }
+
+void btn_4_d() { Serial.println("Button 4 Stage 4"); }
+
+void btn_4_e() { Serial.println("Button 4 Stage 5"); }
+
+void btn_4_f() { Serial.println("Button 4 Stage 6"); }
+
+void btn_4_g() { Serial.println("Button 4 Stage 7"); }
+/******************************************************************************/

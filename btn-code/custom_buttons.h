@@ -45,37 +45,44 @@ class CustomButton {
   void loop(void (*stage_1)(void), void (*stage_2)(void), void (*stage_3)(void),
             void (*stage_4)(void), void (*stage_5)(void), void (*stage_6)(void),
             void (*stage_7)(void)) {
-    dt = millis() - t;
-    if (readInput(pin)) {
-      unsigned int press_time = pressRoutine();
-      if (press_time < TAP_MAX_DELAY) {
-        tap++;
+    bool state = true;
+    while (state) {
+      dt = millis() - t;
+      if (readInput(pin)) {
+        unsigned int press_time = pressRoutine();
+        if (press_time < TAP_MAX_DELAY) {
+          tap++;
+        } else {
+          hold++;
+        }
+        t = millis();
+        dt = 0;
+        state = true;
       } else {
-        hold++;
+        state = false;
       }
-      t = millis();
-      dt = 0;
-    }
 
-    if (dt > GAP_DELAY) {
-      if (tap > 0 || hold > 0) {
-        if ((tap == 1) && (hold == 0))
-          stage_1();
-        else if ((tap == 2) && (hold == 0))
-          stage_2();
-        else if ((tap == 3) && (hold == 0))
-          stage_3();
-        else if ((tap == 4) && (hold == 0))
-          stage_4();
-        else if ((tap == 1) && (hold == 1))
-          stage_5();
-        else if ((tap == 2) && (hold == 1))
-          stage_6();
-        else if ((tap == 3) && (hold == 1))
-          stage_7();
+      if (dt > GAP_DELAY) {
+        state = false;
+        if (tap > 0 || hold > 0) {
+          if ((tap == 1) && (hold == 0))
+            stage_1();
+          else if ((tap == 2) && (hold == 0))
+            stage_2();
+          else if ((tap == 3) && (hold == 0))
+            stage_3();
+          else if ((tap == 4) && (hold == 0))
+            stage_4();
+          else if ((tap == 1) && (hold == 1))
+            stage_5();
+          else if ((tap == 2) && (hold == 1))
+            stage_6();
+          else if ((tap == 3) && (hold == 1))
+            stage_7();
 
-        tap = 0;
-        hold = 0;
+          tap = 0;
+          hold = 0;
+        }
       }
     }
   }
