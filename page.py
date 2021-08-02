@@ -7,13 +7,14 @@ from PyQt5 import QtWidgets
 from get_data import SerialData
 from custom_functions import good_chars
 
+from page_ui import Ui_Form as PageUI
+
 GOOD_CHARS = good_chars()
 
 
-class Page(QtWidgets.QWidget):
+class Page(PageUI):
     def __init__(self, start_addr=0, text_addr=0, text_len=9, port=None):
         super(Page, self).__init__()
-        uic.loadUi('new_page.ui', self)
         self.port = port
         self.start_addr = start_addr
         self.text_addr = text_addr

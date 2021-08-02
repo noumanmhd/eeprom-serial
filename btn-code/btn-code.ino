@@ -118,8 +118,7 @@ void btn_1_f() { Serial.println("Button 1 Stage 6"); }
 
 void btn_1_g() { Serial.println("Button 1 Stage 7"); }
 
-/***************************** Second Button
- * ***********************************/
+/***************************** Second Button **********************************/
 void btn_2_a() { Serial.println("Button 2 Stage 1"); }
 
 void btn_2_b() { Serial.println("Button 2 Stage 2"); }
@@ -149,8 +148,7 @@ void btn_3_f() { Serial.println("Button 3 Stage 6"); }
 
 void btn_3_g() { Serial.println("Button 3 Stage 7"); }
 
-/***************************** Fourth Button
- * ***********************************/
+/***************************** Fourth Button **********************************/
 void btn_4_a() { Serial.println("Button 4 Stage 1"); }
 
 void btn_4_b() { Serial.println("Button 4 Stage 2"); }
