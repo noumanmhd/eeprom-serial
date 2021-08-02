@@ -1,3 +1,0 @@
-/home/noumanmhd/WorkSpace/eeprom-serial/btn-code/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/noumanmhd/WorkSpace/eeprom-serial/btn-code/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/noumanmhd/WorkSpace/eeprom-serial/btn-code/cmake-build-debug/CMakeFiles/btn_code.dir
