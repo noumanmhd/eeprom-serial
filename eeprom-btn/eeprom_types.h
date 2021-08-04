@@ -14,7 +14,9 @@
 const char *presetText[6] = {"INTRO", "VERSE", "CHORUS",
                              "SOLO",  "OUTRO", "BRIDGE"};
 
+char pageLabel_prev[TEXT_LEN];
 char pageLabel[TEXT_LEN];
+char pageLabel_next[TEXT_LEN];
 
 struct Page {
   byte value[P_ROWS][P_COLS];

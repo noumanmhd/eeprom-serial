@@ -31,7 +31,10 @@ int page_row = 0;
 int page_col = 0;
 
 void setup() { Serial.begin(9600); }
-void setup_code() { EEPROM.get(n_page, page); }
+void setup_code() {
+  EEPROM.get(n_page, page);
+  readLabels();
+}
 /******************************************************************************/
 /******************************* EEPROM CODE **********************************/
 /******************************************************************************/
@@ -179,6 +182,8 @@ void btn_2_g() { Serial.println("Button 2 Stage 7"); }
 void btn_3_a() {
   // Page Increment
   n_page++;
+  page_col = 0;
+  page_row = 0;
   if (n_page == NUMBER_OF_PAGES) {
     n_page = 0;
   }
@@ -187,14 +192,16 @@ void btn_3_a() {
   } else {
     EEPROM.get((((n_page - 1) * PAGE_MEMORY) + FIRST_PAGE_MEMORY), page);
   }
-  EEPROM.get(TEXT_ADDR + (n_page * TEXT_LEN), pageLabel);
-  print_value();
+  readLabels();
+  print_page();
   Serial.println("Button 3 Stage 1");
 }
 
 void btn_3_b() {
   // Page Decrement
   n_page--;
+  page_col = 0;
+  page_row = 0;
   if (n_page < 0) {
     n_page = NUMBER_OF_PAGES - 1;
   }
@@ -203,8 +210,8 @@ void btn_3_b() {
   } else {
     EEPROM.get((((n_page - 1) * PAGE_MEMORY) + FIRST_PAGE_MEMORY), page);
   }
-  EEPROM.get(TEXT_ADDR + (n_page * TEXT_LEN), pageLabel);
-  print_value();
+  readLabels();
+  print_page();
   Serial.println("Button 3 Stage 2");
 }
 
@@ -234,14 +241,58 @@ void btn_4_f() { Serial.println("Button 4 Stage 6"); }
 void btn_4_g() { Serial.println("Button 4 Stage 7"); }
 /******************************************************************************/
 
+void readLabels() {
+  int prev = n_page - 1;
+  int next = n_page + 1;
+  if (prev < 0) prev = NUMBER_OF_PAGES - 1;
+  if (next == NUMBER_OF_PAGES) next = 0;
+  EEPROM.get(TEXT_ADDR + (prev * TEXT_LEN), pageLabel_prev);
+  EEPROM.get(TEXT_ADDR + (n_page * TEXT_LEN), pageLabel);
+  EEPROM.get(TEXT_ADDR + (next * TEXT_LEN), pageLabel_next);
+}
+
+void print_page() {
+  Serial.print("Page: ");
+  Serial.println(n_page + 1);
+
+  Serial.print("Prev Label: ");
+  Serial.println(pageLabel_prev);
+
+  Serial.print("Current Label: ");
+  Serial.println(pageLabel);
+
+  Serial.print("Next Label: ");
+  Serial.println(pageLabel_next);
+
+  Serial.println("[Row][Col] = Value");
+  for (int i = 0; i < P_ROWS; i++) {
+    for (int j = 0; j < P_COLS; j++) {
+      page_row = i;
+      page_col = j;
+      Serial.print("[");
+      Serial.print(page_row + 1);
+      Serial.print("][");
+      Serial.print(page_col + 1);
+      Serial.print("] = ");
+      Serial.println(page.value[i][j]);
+    }
+  }
+}
+
 void print_value() {
   Serial.println("--------------------------------------------------------");
 
   Serial.print("Page: ");
   Serial.println(n_page + 1);
 
-  Serial.print("Label: ");
+  Serial.print("Prev Label: ");
+  Serial.println(pageLabel_prev);
+
+  Serial.print("Current Label: ");
   Serial.println(pageLabel);
+
+  Serial.print("Next Label: ");
+  Serial.println(pageLabel_next);
 
   Serial.print("Row: ");
   Serial.println(page_row + 1);
