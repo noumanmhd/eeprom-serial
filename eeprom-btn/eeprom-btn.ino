@@ -1,6 +1,6 @@
-#include "inc_libraries.h"
-#include "eeprom_types.h"
 #include "custom_buttons.h"
+#include "eeprom_types.h"
+#include "inc_libraries.h"
 
 /******************************************************************************/
 #define CMD_HEX 1
@@ -26,7 +26,12 @@ CustomButton btn_4(BTN_4_PIN);
 
 Page page;
 
+int n_page = 0;
+int page_row = 0;
+int page_col = 0;
+
 void setup() { Serial.begin(9600); }
+void setup_code() { EEPROM.get(n_page, page); }
 /******************************************************************************/
 /******************************* EEPROM CODE **********************************/
 /******************************************************************************/
@@ -44,6 +49,7 @@ void loop() {
         Serial.println("{\"status\": true}");
       } else if (cmd[0] == 'N') {
         gui_mode = false;
+        setup_code();
         Serial.println("{\"status\": true}");
       }
     }
@@ -104,12 +110,27 @@ void btn_code() {
   btn_4.loop(btn_4_a, btn_4_b, btn_4_c, btn_4_d, btn_4_e, btn_4_f, btn_4_g);
 }
 /***************************** First Button ***********************************/
-void btn_1_a() { 
-  EEPROM.get(FIRST_PAGE_MEMORY, page);
-  Serial.println(page.value[2][9]);
-  Serial.println("Button 1 Stage 1"); }
+// ROWS FUNCTIONS
+void btn_1_a() {
+  // Row Increment
+  page_row++;
+  if (page_row == P_ROWS) {
+    page_row = 0;
+  }
+  print_value();
 
-void btn_1_b() { Serial.println("Button 1 Stage 2"); }
+  Serial.println("Button 1 Stage 1");
+}
+
+void btn_1_b() {
+  // Row Decrement
+  page_row--;
+  if (page_row < 0) {
+    page_row = P_ROWS - 1;
+  }
+  print_value();
+  Serial.println("Button 1 Stage 2");
+}
 
 void btn_1_c() { Serial.println("Button 1 Stage 3"); }
 
@@ -122,9 +143,26 @@ void btn_1_f() { Serial.println("Button 1 Stage 6"); }
 void btn_1_g() { Serial.println("Button 1 Stage 7"); }
 
 /***************************** Second Button **********************************/
-void btn_2_a() { Serial.println("Button 2 Stage 1"); }
+// COLUMNS FUNCTIONS
+void btn_2_a() {
+  // Column Increment
+  page_col++;
+  if (page_col == P_COLS) {
+    page_col = 0;
+  }
+  print_value();
+  Serial.println("Button 2 Stage 1");
+}
 
-void btn_2_b() { Serial.println("Button 2 Stage 2"); }
+void btn_2_b() {
+  // Column Decrement
+  page_col--;
+  if (page_col < 0) {
+    page_col = P_COLS - 1;
+  }
+  print_value();
+  Serial.println("Button 2 Stage 2");
+}
 
 void btn_2_c() { Serial.println("Button 2 Stage 3"); }
 
@@ -137,9 +175,38 @@ void btn_2_f() { Serial.println("Button 2 Stage 6"); }
 void btn_2_g() { Serial.println("Button 2 Stage 7"); }
 
 /***************************** Third Button ***********************************/
-void btn_3_a() { Serial.println("Button 3 Stage 1"); }
+// PAGE FUNCTIONS
+void btn_3_a() {
+  // Page Increment
+  n_page++;
+  if (n_page == NUMBER_OF_PAGES) {
+    n_page = 0;
+  }
+  if (n_page == 0) {
+    EEPROM.get(0, page);
+  } else {
+    EEPROM.get((((n_page - 1) * PAGE_MEMORY) + FIRST_PAGE_MEMORY), page);
+  }
+  EEPROM.get(TEXT_ADDR + (n_page * TEXT_LEN), pageLabel);
+  print_value();
+  Serial.println("Button 3 Stage 1");
+}
 
-void btn_3_b() { Serial.println("Button 3 Stage 2"); }
+void btn_3_b() {
+  // Page Decrement
+  n_page--;
+  if (n_page < 0) {
+    n_page = NUMBER_OF_PAGES - 1;
+  }
+  if (n_page == 0) {
+    EEPROM.get(0, page);
+  } else {
+    EEPROM.get((((n_page - 1) * PAGE_MEMORY) + FIRST_PAGE_MEMORY), page);
+  }
+  EEPROM.get(TEXT_ADDR + (n_page * TEXT_LEN), pageLabel);
+  print_value();
+  Serial.println("Button 3 Stage 2");
+}
 
 void btn_3_c() { Serial.println("Button 3 Stage 3"); }
 
@@ -166,3 +233,27 @@ void btn_4_f() { Serial.println("Button 4 Stage 6"); }
 
 void btn_4_g() { Serial.println("Button 4 Stage 7"); }
 /******************************************************************************/
+
+void print_value() {
+  Serial.println("--------------------------------------------------------");
+
+  Serial.print("Page: ");
+  Serial.println(n_page + 1);
+
+  Serial.print("Label: ");
+  Serial.println(pageLabel);
+
+  Serial.print("Row: ");
+  Serial.println(page_row + 1);
+
+  Serial.print("Col: ");
+  Serial.println(page_col + 1);
+
+  Serial.print("PrestLabel: ");
+  Serial.println(getPreset(page.presetLabel[page_col]));
+
+  Serial.print("Value: ");
+  Serial.println(page.value[page_row][page_col]);
+
+  Serial.println("--------------------------------------------------------");
+}

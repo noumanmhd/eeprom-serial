@@ -11,6 +11,19 @@
 #define P_ROWS 4
 #define P_COLS 10
 
+const char *presetText[6] = {"INTRO", "VERSE", "CHORUS",
+                             "SOLO",  "OUTRO", "BRIDGE"};
+
+char pageLabel[TEXT_LEN];
+
 struct Page {
   byte value[P_ROWS][P_COLS];
+  byte presetLabel[P_COLS];
+  byte onoffState[P_ROWS - 1][P_COLS];
+  byte program_scene;
 };
+
+char *getPreset(byte index) {
+  if (index > 5) index = 5;
+  return (char *)presetText[index];
+}
