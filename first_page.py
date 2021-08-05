@@ -5,7 +5,7 @@ from PyQt5 import QtCore
 from PyQt5 import QtWidgets
 
 from get_data import SerialData
-from custom_functions import good_chars
+from custom_functions import good_chars, resource_path
 
 GOOD_CHARS = good_chars()
 
@@ -13,7 +13,7 @@ GOOD_CHARS = good_chars()
 class FirstPage(QtWidgets.QWidget):
     def __init__(self, start_addr=0, text_addr=0, text_len=9, port=None):
         super(FirstPage, self).__init__()
-        uic.loadUi('new_first_page.ui', self)
+        uic.loadUi(resource_path('new_first_page.ui'), self)
         self.port = port
         self.start_addr = start_addr
         self.text_addr = text_addr

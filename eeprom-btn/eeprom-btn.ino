@@ -34,6 +34,7 @@ void setup() { Serial.begin(9600); }
 void setup_code() {
   EEPROM.get(n_page, page);
   readLabels();
+  // print_page();
 }
 /******************************************************************************/
 /******************************* EEPROM CODE **********************************/
@@ -120,7 +121,7 @@ void btn_1_a() {
   if (page_row == P_ROWS) {
     page_row = 0;
   }
-  print_value();
+  print_row();
 
   Serial.println("Button 1 Stage 1");
 }
@@ -131,7 +132,7 @@ void btn_1_b() {
   if (page_row < 0) {
     page_row = P_ROWS - 1;
   }
-  print_value();
+  print_row();
   Serial.println("Button 1 Stage 2");
 }
 
@@ -153,7 +154,7 @@ void btn_2_a() {
   if (page_col == P_COLS) {
     page_col = 0;
   }
-  print_value();
+  print_col();
   Serial.println("Button 2 Stage 1");
 }
 
@@ -163,7 +164,7 @@ void btn_2_b() {
   if (page_col < 0) {
     page_col = P_COLS - 1;
   }
-  print_value();
+  print_col();
   Serial.println("Button 2 Stage 2");
 }
 
@@ -252,6 +253,39 @@ void readLabels() {
 }
 
 void print_page() {
+  Serial.println("--------------------------------------------------------");
+
+  Serial.println(n_page + 1);
+
+  Serial.print("Prev Label: ");
+  Serial.println(pageLabel_prev);
+
+  Serial.print("Current Label: ");
+  Serial.println(pageLabel);
+
+  Serial.print("Next Label: ");
+  Serial.println(pageLabel_next);
+
+  Serial.println("[Row][Col] = Value | PresetLabel");
+  for (int i = 0; i < P_ROWS; i++) {
+    for (int j = 0; j < P_COLS; j++) {
+      Serial.print("[");
+      Serial.print(page_row + 1);
+      Serial.print("][");
+      Serial.print(page_col + 1);
+      Serial.print("] = ");
+      Serial.print(page.value[i][j]);
+      Serial.print(" | ");
+      Serial.println(getPreset(page.presetLabel[j]));
+    }
+  }
+
+  Serial.println("--------------------------------------------------------");
+}
+
+void print_col() {
+  Serial.println("--------------------------------------------------------");
+
   Serial.print("Page: ");
   Serial.println(n_page + 1);
 
@@ -264,19 +298,49 @@ void print_page() {
   Serial.print("Next Label: ");
   Serial.println(pageLabel_next);
 
-  Serial.println("[Row][Col] = Value");
+  Serial.println("[Row][Col] = Value | PresetLabel");
   for (int i = 0; i < P_ROWS; i++) {
-    for (int j = 0; j < P_COLS; j++) {
-      page_row = i;
-      page_col = j;
-      Serial.print("[");
-      Serial.print(page_row + 1);
-      Serial.print("][");
-      Serial.print(page_col + 1);
-      Serial.print("] = ");
-      Serial.println(page.value[i][j]);
-    }
+    Serial.print("[");
+    Serial.print(page_row + 1);
+    Serial.print("][");
+    Serial.print(page_col + 1);
+    Serial.print("] = ");
+    Serial.print(page.value[i][page_col]);
+    Serial.print(" | ");
+    Serial.println(getPreset(page.presetLabel[page_col]));
   }
+
+  Serial.println("--------------------------------------------------------");
+}
+
+void print_row() {
+  Serial.println("--------------------------------------------------------");
+
+  Serial.print("Page: ");
+  Serial.println(n_page + 1);
+
+  Serial.print("Prev Label: ");
+  Serial.println(pageLabel_prev);
+
+  Serial.print("Current Label: ");
+  Serial.println(pageLabel);
+
+  Serial.print("Next Label: ");
+  Serial.println(pageLabel_next);
+
+  Serial.println("[Row][Col] = Value | PresetLabel");
+  for (int j = 0; j < P_COLS; j++) {
+    Serial.print("[");
+    Serial.print(page_row + 1);
+    Serial.print("][");
+    Serial.print(page_col + 1);
+    Serial.print("] = ");
+    Serial.print(page.value[page_row][j]);
+    Serial.print(" | ");
+    Serial.println(getPreset(page.presetLabel[j]));
+  }
+
+  Serial.println("--------------------------------------------------------");
 }
 
 void print_value() {
